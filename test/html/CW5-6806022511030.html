@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>แบบฟอร์มสมัครเรียนต่อระดับปริญญาตรี</title>
+
+</head>
+<body>
+  <h1>แบบฟอร์มสมัครเรียนต่อระดับปริญญาตรี</h1>
+  <form action="#" method="post" enctype="multipart/form-data">
+
+    <fieldset>
+      <legend>ส่วนที่ 1: ข้อมูลส่วนตัว</legend>
+      <div class="grid">
+        <div>
+          <label for="title">คำนำหน้าชื่อ</label>
+          <select id="title" name="title" >
+            <option value="">-- เลือก --</option>
+            <option>นาย</option>
+            <option>นางสาว</option>
+            <option>นาง</option>
+          </select>
+        </div>
+        
+        <div>
+            <label for="firstname">ชื่อ</label>
+            <input id="firstname" name="firstname" type="text" >
+        </div>
+
+        <div>
+            <label for="lastname">นามสกุล</label>
+            <input id="lastname" name="lastname" type="text" >
+        </div>
+
+        <div>
+          <label for="idcard">เลขประจำตัวประชาชน (13 หลัก)</label>
+          <input id="idcard" name="idcard" type="text" maxlength="13" pattern="\d{13}" placeholder="กรอกตัวเลข 13 หลัก" >
+          <small class="hint">ระบบจะรับเฉพาะตัวเลข 13 ตัว (ไม่มีขีด)</small>
+        </div>
+
+        <div>
+          <label for="birthdate">วัน/เดือน/ปีเกิด</label>
+          <input id="birthdate" name="birthdate" type="date" >
+        </div>
+
+        <div>
+          <label for="age">อายุ (ปี)</label>
+          <input id="age" name="age" type="number" min="0" max="150" >
+        </div>
+
+        <div class="gander">
+          <label>เพศ</label>
+          <div class="radio-group">
+            <label><input type="radio" name="gender" value="ชาย" > ชาย</label>
+            <label><input type="radio" name="gender" value="หญิง"> หญิง</label>
+            <label><input type="radio" name="gender" value="ไม่ระบุ"> ไม่ระบุ</label>
+          </div>
+        </div>
+
+        <div>
+          <label for="nationality">สัญชาติ</label>
+          <input id="nationality" name="nationality" type="text">
+        </div>
+
+        <div>
+          <label for="ethnicity">เชื้อชาติ</label>
+          <input id="ethnicity" name="ethnicity" type="text">
+        </div>
+
+        <div>
+          <label for="religion">ศาสนา</label>
+          <input id="religion" name="religion" type="text">
+        </div>
+
+        <div>
+          <label for="phone">เบอร์โทรศัพท์</label>
+          <input id="phone" name="phone" type="tel" pattern="[0-9+\-\s]{7,20}" >
+        </div>
+
+        <div>
+          <label for="email">อีเมล</label>
+          <input id="email" name="email" type="email" >
+        </div>
+
+        <div class="address">
+          <label for="address">ที่อยู่</label>
+          <textarea id="address" name="address" placeholder="ที่อยู่ปัจจุบัน" ></textarea>
+        </div>
+
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>ส่วนที่ 2: ข้อมูลการสมัคร</legend>
+      <div class="grid">
+        <div>
+          <label for="qualification">วุฒิที่จบมา</label>
+          <select id="qualification" name="qualification" >
+            <option value="">-- เลือก --</option>
+            <option>ม.6</option>
+            <option>ปวช.</option>
+            <option>ปวส.</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="school_name">ชื่อสถานศึกษาที่จบ</label>
+          <input id="school_name" name="school_name" type="text" >
+        </div>
+
+        <div>
+          <label for="graduate_year">ปีที่จบ</label>
+          <input id="graduate_year" name="graduate_year" type="number" min="1900" max="2100" >
+        </div>
+
+        <div>
+          <label for="gpa">GPA</label>
+          <input id="gpa" name="gpa" type="number" step="0.01" min="0" max="4.00" >
+        </div>
+
+        <div>
+          <label for="major_apply">สาขาที่สมัคร</label>
+          <select id="major_apply" name="major_apply" >
+            <option value="">-- เลือก --</option>
+            <option>IT</option>
+            <option>ITI</option>
+            <option>INE</option>
+            <option>INET</option>
+          </select>
+        </div>
+
+        <div class="full">
+          <label for="reason">เหตุผลที่เลือกสาขา</label>
+          <textarea id="reason" name="reason"></textarea>
+        </div>
+      </div>
+    </fieldset>
+
+
+    <fieldset>
+      <legend>ส่วนที่ 3: ประวัติการศึกษา (กรอก 3 ระดับ)</legend>
+
+      <table style="width:100%;border-collapse:collapse">
+        <thead>
+          <tr>
+            <th style="text-align:left;padding:8px">ระดับการศึกษา</th>
+            <th style="text-align:left;padding:8px">สถานศึกษา</th>
+            <th style="text-align:left;padding:8px">จังหวัด</th>
+            <th style="text-align:left;padding:8px">ปีที่เข้า</th>
+            <th style="text-align:left;padding:8px">ปีที่จบ</th>
+            <th style="text-align:left;padding:8px">วุฒิที่ได้รับ</th>
+            <th style="text-align:left;padding:8px">GPA</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding:6px">ประถมศึกษา</td>
+            <td style="padding:6px"><input name="pri_school" type="text"></td>
+            <td style="padding:6px"><input name="pri_province" type="text"></td>
+            <td style="padding:6px"><input name="pri_year_in" type="number" min="1900" max="2100"></td>
+            <td style="padding:6px"><input name="pri_year_out" type="number" min="1900" max="2100"></td>
+            <td style="padding:6px"><input name="pri_degree" type="text"></td>
+            <td style="padding:6px"><input name="pri_gpa" type="number" step="0.01" min="0" max="4.00"></td>
+          </tr>
+
+          <tr>
+            <td style="padding:6px">มัธยมต้น</td>
+            <td style="padding:6px"><input name="jun_school" type="text"></td>
+            <td style="padding:6px"><input name="jun_province" type="text"></td>
+            <td style="padding:6px"><input name="jun_year_in" type="number" min="1900" max="2100"></td>
+            <td style="padding:6px"><input name="jun_year_out" type="number" min="1900" max="2100"></td>
+            <td style="padding:6px"><input name="jun_degree" type="text"></td>
+            <td style="padding:6px"><input name="jun_gpa" type="number" step="0.01" min="0" max="4.00"></td>
+          </tr>
+
+          <tr>
+            <td style="padding:6px">มัธยมปลาย / ปวช. / ปวส.</td>
+            <td style="padding:6px"><input name="sen_school" type="text"></td>
+            <td style="padding:6px"><input name="sen_province" type="text"></td>
+            <td style="padding:6px"><input name="sen_year_in" type="number" min="1900" max="2100"></td>
+            <td style="padding:6px"><input name="sen_year_out" type="number" min="1900" max="2100"></td>
+            <td style="padding:6px"><input name="sen_degree" type="text"></td>
+            <td style="padding:6px"><input name="sen_gpa" type="number" step="0.01" min="0" max="4.00"></td>
+          </tr>
+        </tbody>
+      </table>
+
+    </fieldset>
+
+    <fieldset>
+      <legend>ส่วนที่ 4: เอกสารแนบ</legend>
+      <div class="grid">
+        <div class="full">
+          <label for="idcard_file">สำเนาบัตรประชาชน (PDF, JPG, PNG)</label>
+          <input id="idcard_file" name="idcard_file" type="file" accept="application/pdf,image/*" >
+        </div>
+
+        <div class="full">
+          <label for="degree_files">สำเนาวุฒิการศึกษา (เช่น ปพ.1) (รองรับได้หลายไฟล์)</label>
+          <input id="degree_files" name="degree_files[]" type="file" accept="application/pdf,image/*" multiple >
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>ส่วนที่ 5: ยืนยันข้อมูล</legend>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="confirm" > ยอมรับเงื่อนไข</label>
+      </div>
+
+      <div class="actions">
+        <input type="reset" value="รีเซ็ต">
+        <input type="submit" value="ส่งใบสมัคร">
+      </div>
+    </fieldset>
+
+  </form>
+
+</body>
+</html>
